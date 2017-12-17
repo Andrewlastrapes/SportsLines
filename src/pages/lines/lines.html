@@ -2,28 +2,11 @@
 
 
 <ion-content padding>
-	<ion-grid>
-		<ion-row>
-			<ion-col col-6>
-				<h1>Lines</h1>
-			</ion-col>
-			<ion-col col-6>
-				<button ion-button float-right>Logout</button>
-			</ion-col>
-		</ion-row>
-		<br>
-		<ion-row>
-			<ion-col>
-				<h5>Username: $1204.45</h5>
-			</ion-col>
-		</ion-row>
-	</ion-grid>
-		<br>
-		<br>
-
-		<ion-tabs>
+	
+	<ion-tabs tabsPlacement="top">
 		  <ion-tab [root]="tab1Root" tabTitle="NFL"></ion-tab>
 		  <ion-tab [root]="tab2Root" tabTitle="NCAAF"></ion-tab>
 		  <ion-tab [root]="tab3Root" tabTitle="NBA"></ion-tab>
 		</ion-tabs>
+		
 </ion-content>
