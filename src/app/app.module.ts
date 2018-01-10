@@ -14,6 +14,9 @@ import { NbaPage } from "../pages/nba/nba";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LinesPage } from "../pages/lines/lines";
+import { RestProvider } from '../providers/rest/rest';
+import { HttpClientModule, HttpHeaders, HttpClientJsonpModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -27,12 +30,16 @@ import { LinesPage } from "../pages/lines/lines";
     NflPage,
     NcaafPage,
     NbaPage
+  
 
 
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientJsonpModule,
+    HttpClientModule
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -49,7 +56,8 @@ import { LinesPage } from "../pages/lines/lines";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    RestProvider
   ]
 })
 export class AppModule {}
